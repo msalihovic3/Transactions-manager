@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frag"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/budget"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:textColor="#100F0F"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalLimit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <TextView
+        android:id="@+id/totalLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        android:textColor="#221E1E"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/filterSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/filterSpinner"
+        android:layout_width="370dp"
+        android:layout_height="62dp"
+
+        android:layout_marginBottom="132dp"
+        app:layout_constraintBottom_toTopOf="@+id/sortspiner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="349dp"
+        android:layout_height="243dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/idAddTransaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortspiner">
+
+
+        <ListView
+            android:id="@+id/listTrasaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/idAddTransaction"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sortspiner"
+            app:layout_constraintVertical_bias="0.82" />
+
+    </FrameLayout>
+
+    <Spinner
+        android:id="@+id/sortspiner"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="149dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/sortspiner"
+        app:layout_constraintEnd_toStartOf="@+id/idRigth"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toEndOf="@+id/idLeft"
+        app:layout_constraintTop_toBottomOf="@+id/filterSpinner"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/idLeft"
+        android:layout_width="73dp"
+        android:layout_height="49dp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/sortspiner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSpinner"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/left" />
+
+    <ImageButton
+        android:id="@+id/idRigth"
+        android:layout_width="73dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/sortspiner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSpinner"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/right" />
+
+    <Button
+        android:id="@+id/idAddTransaction"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:text="Add transaction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

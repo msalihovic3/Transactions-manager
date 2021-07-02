@@ -1,0 +1,12 @@
++++++ Mirnesa Salihović
++++++ 18115
++++++ 2019/20
++++++ RMA
+
+-MainActivity je implementiran tako da odradi filtriranje i sortiranje uz pomoc spinera odradi kada se klikne na odabrane opcije, 
+to vazi i za filtriranje po mjesecu,kada se kliikne na jednu od srelica pocinje filtriranje po mjesecu,
+
+-posto nije nista navedeno konkretno prilikom popunjavanja aktivnosti za transakciju amount sam unosila kao pozitivne vrijednosti,
+a prilikom sabiranja tj obracuna uzimala sam u obzir da li je ona tipa PAYMENT
+
+-prilikom izvrsavanja svake opcije potrebno je sacekati odredjeni vremenski period kako bi se pravilno refresali svi posaci 
